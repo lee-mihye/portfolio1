@@ -1,0 +1,106 @@
+@charset "utf-8";
+/* common.css - 공통 레이아웃 디자인 */
+
+/******************************************상단영역******************************************/
+.top{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.46);
+    z-index: 100000;
+}
+#top [class*=col-]{
+    height: 60px;
+}
+
+/*로고이미지*/
+#logo img{
+    height: 40px;
+    margin-left: 70px;
+}
+
+/*전체메뉴*/
+.gnb{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.gnb>ul{
+    display: flex;
+}
+.gnb>ul>li{
+    padding: 0 15px;
+}
+
+/*마이메뉴*/
+.gnb_my{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    margin-right: 80px;
+}
+.gnb_my>li{
+    padding: 0 8px;
+}
+
+/******************************************하단영역******************************************/
+.info {
+    height: auto;
+    
+}
+
+#info .fbx{
+    height: auto;
+}
+#info .ih1{/*하단첫째줄*/
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+#info .ih2{/*하단둘째줄*/
+    height: 225px;
+}
+
+.page.info{
+    border-top: 2px solid #f9f9f9;   
+}
+.foot_1{
+    flex: 1;
+}
+
+.foot_1>span{
+    margin-left: 1%;
+}
+.foot_2{
+    font-size: 0.875rem;
+    color: #666;
+    line-height: 1.8;
+}
+
+body {
+  margin: 10px;
+  font-size: 14px;
+}
+
+/*select 박스*/
+/*https://webclub.tistory.com/235*/
+select {
+    width: 150px; /* 원하는 너비설정 */
+    padding: .8em .5em; /* 여백으로 높이 설정 */
+    font-size: 1rem;
+    font-family: inherit;  /* 폰트 상속 */
+    background: url(../images/select_btn.png) no-repeat 70% 60%; /* 네이티브 화살표를 커스텀 화살표로 대체 */
+    border: 0;
+    
+    border-radius: 0px; /* iOS 둥근모서리 제거 */
+    -webkit-appearance: none; /* 네이티브 외형 감추기 */
+    -moz-appearance: none;
+    appearance: none;
+}
+select:last-child{
+    background-position: 50% 60%;
+}

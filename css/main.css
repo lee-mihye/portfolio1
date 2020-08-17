@@ -1,0 +1,544 @@
+@charset "utf-8";
+/* main.css - 메인페이지 CSS */
+
+/*파일 merging(합치기)*/
+@import url(reset.css);
+@import url(core.css);
+@import url(common.css);
+@import url(gridSetFlex.css);
+@import url(gridView.css);
+
+/*임시타이틀*/
+.tit {
+    font-size: 30px;
+    text-align: center;
+}
+
+/*메인 페이지 전용 디자인*/
+
+/*인트로 페이지*/
+.intro {
+    background-color: #fff;
+}
+
+#intro {
+    position: relative;
+    /*부모자격*/
+}
+
+.intro_tit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.let {
+    display: flex;
+}
+
+.plus {
+    width: 50px;
+    background: url(../images/intro/logo_08.png) no-repeat center/100%;
+    margin: 0 50px;
+}
+
+
+
+/***********************************************배너영역***********************************************/
+.ban {
+    position: relative;
+    /*부모자격*/
+    overflow: hidden;
+}
+
+/*슬라이드*/
+#slide {
+    position: absolute;
+    /*부모?.ban*/
+    left: 0;
+    width: 400%;
+    /*4장짜리*/
+    height: 100%;
+    display: flex;
+}
+
+#slide li {
+    position: relative;
+    /*부모자격*/
+    width: 25%;
+    height: 100%;
+    cursor: pointer;
+}
+
+#slide li.b1 {
+    background: url(../images/ban_1.png) no-repeat center/cover;
+}
+
+#slide li.b2 {
+    background: url(../images/ban_2.png) no-repeat center/cover;
+}
+
+#slide li.b3 {
+    background: url(../images/ban_3.png) no-repeat center/cover;
+}
+
+#slide li.b4 {
+    background: url(../images/ban_4.png) no-repeat center/cover;
+}
+
+
+/*배너 속 텍스트*/
+.ban_box {
+    width: 60px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    background-color: #d63b60;
+    position: absolute;
+    top: 35%;
+    left: 8.3333%;
+}
+
+.ban_box > small {
+    color: #fff;
+    font-size: 1rem;
+}
+
+/*공통 텍스트*/
+.btxt {
+    position: absolute;
+    /*부모는? #slide li*/
+    top: 50%;
+    transform: translateY(-50%);
+    left: 8.3333%;
+}
+
+.btxt_1 {
+    font-size: 3.125rem;
+    margin-top: 15px;
+}
+
+.btxt_2 {
+    font-size: 1.5625rem;
+    margin-top: 40px;
+}
+
+
+/*배너 블릿버튼*/
+.bbtn {
+    position: absolute;
+    top: 91.481%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bbtn > ol {
+    display: flex;
+    width: 126px;
+    height: 19px;
+    justify-content: space-between;
+}
+
+.oneb {
+    display: flex;
+    width: 80px;
+    justify-content: space-between;
+    margin-top: 3.5px;
+}
+
+.oneb > li > a {
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(224, 224, 224, 0.7);
+}
+
+
+
+
+/***********************************************컨텐츠 영역***********************************************/
+#cont1 [class*=col-] {
+    /*height: 256px;*/
+}
+#cont1{
+    position: relative;
+}
+#cont1 .tit {
+    position: absolute;
+    text-align: center;
+    top: 10%;
+    left: 0;
+    right: 0;
+    font-size: 3.125rem;
+}
+
+/*베스트셀러 슬라이드 속박스*/
+.best_box {/*리스트부모*/
+    position: relative;
+    width: 1600px;
+    height: 700px;
+    margin: auto;
+    display: flex;
+    overflow: hidden;
+    align-content: center;
+    top: 55%;
+    transform: translateY(-50%);
+
+    
+
+}
+
+.best_list {/*ul*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;/*한화면에 3개씩 2세트니까 200%*/
+    height: 100%;
+    display: flex;
+}
+
+
+/*이미지 삽입 영역*/
+.best_list > li {
+    position: relative;
+    width: 14.666%;/*6개기본으로!6등분 마진값 양옆 2%뺐음*/
+    margin: 0 1%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;/*세로모두보이게 기준!(가로는자동)*/
+}
+
+.best_list li.best_1 {
+    background-image: url(../images/bestseller_1.png);
+}
+
+.best_list li.best_2 {
+    background-image: url(../images/bestseller_2.png);
+}
+
+.best_list li.best_3 {
+    background-image: url(../images/bestseller_3.png);
+}
+
+.best_list li.best_4 {
+    background-image: url(../images/bestseller_4.png);
+}
+
+.best_list li.best_5 {
+    background-image: url(../images/bestseller_5.png);
+}
+
+
+/*베스트셀러 텍스트영역*/
+.best_txt {
+text-align: center;
+    bottom: 0;
+    position: absolute;
+    width: 100%; 
+    font-size: 1.5rem;
+}
+.best_txt1{
+   
+}
+.best_txt2{
+    margin: 15px;
+    color: #429efb;
+}
+.best_txt3{
+    
+}
+
+
+/*블릿버튼*/
+.best_btn{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50);
+   
+}
+.best_btn > ol {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/***********************************************비디오 영역***********************************************/
+#cont2 {
+    position: relative;
+}
+
+/*왼쪽 텍스트*/
+.vtxt {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.vtxt_1 {
+    font-size: 3.75rem;
+}
+
+.vtxt_2 {
+    margin: 80px;
+    font-size: 1.875rem;
+}
+
+.vtxt_3 {
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
+    background-color: #222;
+    text-align: center;
+    margin: 0 auto;
+}
+.vtxt_3 a{
+    color: #fff;
+    font-size: 1.875rem;
+}
+
+/*오른쪽 동영상*/
+.video{
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+
+
+
+/***********************************************링크 영역***********************************************/
+.linkbox{
+    position: relative;
+    width: 100%;
+}
+.fbx.link_ul {/*비율유지*/
+    position: absolute;
+    top: 10%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+
+.linkbox::before{/*비율유지*/
+    content: "";
+    display: block;
+    padding-top: 42%;
+}
+
+.link_ul>li{
+    flex:1; 
+    margin-right: 2%;
+    height: 100%;
+    position: relative;
+}
+
+.link_ul>li:last-child{
+    margin-right: 0;
+}
+
+
+
+/*이미지의 크기*/
+.img{
+    height: 550px;
+}
+
+/*이미지 삽입설정*/
+.link_1 {
+    background: url(../images/link1_brandstory.png) no-repeat top/100%;
+}
+.link_2 {
+    background: url(../images/link2_filterspace.png) no-repeat top/100%;
+}
+.link_3 {
+    background: url(../images/link3_event.png) no-repeat top/100%;
+}
+.link_4 {
+    background: url(../images/link4_jartv.png) no-repeat top/100%;
+}
+
+/*텍스트 영역*/
+.ltxt{
+    text-align: center;
+    margin-top: 30px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.ltxt_1{
+    font-size: 1.875rem;
+}
+.ltxt_2{
+    font-size: 1.25rem;
+    margin-top: 10px;
+}
+
+/***********************************************SNS 영역***********************************************/
+#cont4{
+    position: relative;
+}
+.sns_inbox{
+    
+    width: 1600px;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/*인스타*/
+.insbox{
+    position: relative;
+    width: 100%;
+}
+
+.insbox::before{/*비율유지*/
+    content: "";
+    display: block;
+    padding-top: 18%;
+}
+
+.instar_ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 202%;
+    height: 100%;
+    display: flex;
+}
+
+.instar_ul li{
+    width: 16%;
+    height: 100%;
+    margin-right: 1%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+}
+
+.instar_ul li:last-child{
+    margin-right: 0;
+}
+
+.instar_ul li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+.instar_1{
+    background-image: url(../images/instar_1.png);
+}
+.instar_2{
+    background-image: url(../images/instar_2.png);
+}
+.instar_3{
+    background-image: url(../images/instar_3.png);
+}
+.instar_4{
+    background-image: url(../images/instar_4.png);
+}
+.instar_5{
+    background-image: url(../images/instar_5.png);
+}
+
+
+/*유튜브*/
+.youtbox{
+    position: relative;
+    width: 100%;
+}
+
+.youtbox::before{/*비율유지*/
+    content: "";
+    display: block;
+    padding-top: 18%;
+}
+
+.youtube_ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 202%;
+    height: 100%;
+    display: flex;
+}
+
+.youtube_ul li{
+    width: 16%;
+    height: 100%;
+    margin-right: 1%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+}
+
+.youtube_ul li:last-child{
+    margin-right: 0;
+}
+
+.youtube_ul li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+.youtube_1{
+    background-image: url(../images/ut_1.png);
+}
+.youtube_2{
+    background-image: url(../images/ut_2.png);
+}
+.youtube_3{
+    background-image: url(../images/ut_3.png);
+}
+.youtube_4{
+    background-image: url(../images/ut_4.png);
+}
+.youtube_5{
+    background-image: url(../images/ut_5.png);
+}
+
+/*중간 선*/
+.sns_bar{
+    background-color: #ccc;
+    width: 100%;
+    height: 3px;
+    margin: 1% 0;
+}
+
+
+/*블릿버튼*/
+.link_btn ol{
+    display: flex;
+    justify-content: space-between;
+}
+
+.link_btn{
+  position: absolute;
+    width: 100%;  
+}
+
+.link_btn.instar{
+    top: 305px;
+}
+
+.link_btn.youtb{
+    top: 690px;
+}
+
+
+
+
+
+
+
+
