@@ -59,48 +59,82 @@
 #info .ih1{/*하단첫째줄*/
     height: 60px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 #info .ih2{/*하단둘째줄*/
     height: 225px;
+    
+}
+.info .ih2{
+    background-color: #f9f9f9;
 }
 
 .page.info{
     border-top: 2px solid #f9f9f9;   
 }
+
 .foot_1{
-    flex: 1;
+    display: flex;
 }
 
-.foot_1>span{
-    margin-left: 1%;
+.foot_1 a{
+    position: relative;
+    padding: 0 10px;
 }
+.foot_1 a::after{
+   content: '';
+    position: absolute;
+    width: 1px;
+    height: 14px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: #000;
+}
+.foot_1 a:first-child{
+    padding-left: 0;
+}
+.foot_1 a:first-child::after{
+    display: none;
+}
+
+
 .foot_2{
     font-size: 0.875rem;
     color: #666;
     line-height: 1.8;
+     
 }
 
 body {
-  margin: 10px;
   font-size: 14px;
 }
 
-/*select 박스*/
-/*https://webclub.tistory.com/235*/
-select {
-    width: 150px; /* 원하는 너비설정 */
-    padding: .8em .5em; /* 여백으로 높이 설정 */
-    font-size: 1rem;
-    font-family: inherit;  /* 폰트 상속 */
-    background: url(../images/select_btn.png) no-repeat 70% 60%; /* 네이티브 화살표를 커스텀 화살표로 대체 */
-    border: 0;
-    
-    border-radius: 0px; /* iOS 둥근모서리 제거 */
-    -webkit-appearance: none; /* 네이티브 외형 감추기 */
-    -moz-appearance: none;
-    appearance: none;
+
+.foot_2 a{
+   border: 1px solid #ccc;
+    padding: 0 10px;
+    color: #666;
+    background-color: #e2dfdf;
 }
-select:last-child{
-    background-position: 50% 60%;
+
+
+
+.select_box select{    
+    width: 137px;
+    height: 30px;
+    font-size: 17px;
+    color: #777;
+    border: none;
 }
+
+
+.select_box select:focus{  
+    outline: none;
+}
+
+
+
+
+
